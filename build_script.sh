@@ -577,6 +577,8 @@ mkimage -A arm -T script -C none -n "Snickerdoodle Boot Script" -d boot-scr uboo
 }
 
 create_card() {
+cd $rootdir
+ 
 dd conv=sync,noerror if=/dev/zero of=snickerdoodle.img bs=1M count=4096
 
 #tune2fs -c0 -i0 snickerdoodle.img
