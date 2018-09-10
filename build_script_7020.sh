@@ -468,7 +468,7 @@ build_dtb() {
 make -C $rootdir/dtc
 export PATH=$rootdir/dtc:$PATH
 
-cd $rootdir/snickerdoodle-black-dts
+cd $rootdir/snickerdoodle-dts
 make
 cd $rootdir
 }
@@ -528,7 +528,7 @@ rm -rf $rootdir/bootfiles
 mkdir $rootdir/bootfiles
 
 cp $rootdir/fsbl.elf $rootdir/bootfiles/fsbl.elf
-cp $rootdir/snickerdoodle-dts/snickerdoodle.dtb $rootdir/bootfiles/devicetree.dtb
+cp $rootdir/snickerdoodle-dts/snickerdoodle-black.dtb $rootdir/bootfiles/devicetree.dtb
 cp $rootdir/snickerdoodle-u-boot/u-boot $rootdir/bootfiles/u-boot.elf
 cp $rootdir/snickerdoodle-linux/arch/arm/boot/uImage $rootdir/bootfiles/uImage
 
