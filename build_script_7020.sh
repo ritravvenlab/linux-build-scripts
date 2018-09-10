@@ -468,7 +468,7 @@ build_dtb() {
 make -C $rootdir/dtc
 export PATH=$rootdir/dtc:$PATH
 
-cd $rootdir/snickerdoodle-dts
+cd $rootdir/snickerdoodle-black-dts
 make
 cd $rootdir
 }
@@ -480,7 +480,7 @@ cd $rootdir
 build_u_boot() {
 export ARCH=arm
 export CROSS_COMPILE=arm-none-eabi-
-make -C $rootdir/snickerdoodle-u-boot snickerdoodle_defconfig
+make -C $rootdir/snickerdoodle-u-boot snickerdoodle_black_defconfig
 make -C $rootdir/snickerdoodle-u-boot
 export PATH=$rootdir/snickerdoodle-u-boot/tools:$PATH
 }
